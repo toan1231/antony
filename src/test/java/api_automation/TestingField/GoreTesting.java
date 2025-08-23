@@ -38,7 +38,7 @@ public class GoreTesting extends TestBase {
             Response response = given()
                     .header("Authorization", "Be chaud923586bca288aef6e650810925a5426ad3a62d413a6501fe5cc0d97185d610c")
                     .contentType(ContentType.JSON)
-                    .body(mappBuilder)
+                    .body(mappBuilderchauthi)
                     .when()
                     .post("http://localhost:8080//job/testing2/build?token=chau123456789");
             int statusCode = response.getStatusCode();
