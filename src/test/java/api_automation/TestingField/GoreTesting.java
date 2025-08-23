@@ -20,8 +20,8 @@ import org.testng.annotations.Test;
 public class GoreTesting extends TestBase {
 
     @Test(dataProvider = "dataProvider", dataProviderClass = GorestDataProviderClass.class)
-    public void user_create_requestData(String email, String name, String gender, String status) throws JsonProcessingException {
-        for (int i = 0; i < 10; i++) {
+    public void user_create_requestData(String email, String name, String gender, String status) throws JsonProcessingException, InterruptedException {
+        for (int i = 0; i < 100; i++) {
 
 
             Log.info("This is request builder");
@@ -42,6 +42,7 @@ public class GoreTesting extends TestBase {
                     .when()
                     .post("https://gorest.co.in/public/v1/users");
             int statusCode = response.getStatusCode();
+            Thread.sleep(3000);
 
 
         }
