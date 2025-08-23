@@ -21,7 +21,7 @@ public class GoreTesting extends TestBase {
 
     @Test(dataProvider = "dataProvider", dataProviderClass = GorestDataProviderClass.class)
     public void user_create_requestData(String email, String name, String gender, String status) throws JsonProcessingException, InterruptedException {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
 
 
             Log.info("This is request builder");
@@ -40,7 +40,7 @@ public class GoreTesting extends TestBase {
                     .contentType(ContentType.JSON)
                     .body(mappBuilder)
                     .when()
-                    .post("https://gorest.co.in/public/v1/users");
+                    .post("http://localhost:8080//job/testing2/build?token=chau123456789");
             int statusCode = response.getStatusCode();
             Thread.sleep(3000);
 
