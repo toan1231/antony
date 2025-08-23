@@ -7,7 +7,6 @@ public class GorestDataProviderClass {
     public Object[][] method() {
         return new Object[][]  {
                 {"John@gmail.com", "John", "female", "Active"},
-                {"David@gmail.com", "David", "male", "Inactive"},
                   };
 
     }

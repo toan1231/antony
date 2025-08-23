@@ -15,13 +15,14 @@ import api_automation.utils.TestBase;
 import io.restassured.response.Response;
 
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class GoreTesting extends TestBase {
 
     @Test(dataProvider = "dataProvider", dataProviderClass = GorestDataProviderClass.class)
     public void user_create_requestData(String email, String name, String gender, String status) throws JsonProcessingException, InterruptedException {
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 3; i++) {
 
 
             Log.info("This is request builder");
@@ -36,13 +37,14 @@ public class GoreTesting extends TestBase {
             String mappBuilder = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(builder);
             Log.info("This is the beginning of post request");
             Response response = given()
-                    .header("Authorization", "Bearer chaud923586bca288aef6e650810925a5426ad3a62d413a6501fe5cc0d97185d610c")
+                    .header("Authorization", "Bearer d923586bca288aef6e650810925a5426ad3a62d413a6501fe5cc0d97185d610c")
                     .contentType(ContentType.JSON)
-                    .body(mappBuilder)
                     .when()
-                    .post("http://localhost:8080//job/testing2/build?token=chau123456789");
+                    .get("https://gorest.co.in/public/v1/users?gender=male&status=inactive&id=4124");
             int statusCode = response.getStatusCode();
-            Thread.sleep(3000);
+            Assert.assertEquals(statusCode, 200);
+           //
+            Thread.sleep(1000);
 
 
         }
