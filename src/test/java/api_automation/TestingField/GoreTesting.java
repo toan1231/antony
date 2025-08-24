@@ -37,8 +37,8 @@ public class GoreTesting extends TestBase {
             String mappBuilder = mapper.writerWithDefaultPrettyPrinter().writeValueAsString(builder);
             Log.info("This is the beginning of post request");
             Response response = given()
-                    .auth()
-                    .preemptive().basic("admin","1117f3a4e4f5794833bfc2a1186a99e24b")
+                  //  .auth()
+                  //  .preemptive().basic("admin","1117f3a4e4f5794833bfc2a1186a99e24b")
                    .header("Authorization", "Bearer d923586bca288aef6e650810925a5426ad3a62d413a6501fe5cc0d97185d610c")
                     .contentType(ContentType.JSON)
                     .when()
