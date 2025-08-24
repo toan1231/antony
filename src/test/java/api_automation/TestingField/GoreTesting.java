@@ -48,7 +48,7 @@ public class GoreTesting extends TestBase {
             //https://gorest.co.in/public/v1/users?gender=male&status=inactive&id=4124
             int statusCode = response.getStatusCode();
         //    Assert.assertEquals(statusCode, 200);
-            System.out.println(response.prettyPrint()+"1111111111111111111");
+         //   System.out.println(response.prettyPrint()+"1111111111111111111");
             Thread.sleep(1000);
 
 
