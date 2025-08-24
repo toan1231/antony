@@ -40,7 +40,7 @@ public class GoreTesting extends TestBase {
                     .header("Authorization", "Bearer d923586bca288aef6e650810925a5426ad3a62d413a6501fe5cc0d97185d610c")
                     .contentType(ContentType.JSON)
                     .when()
-                    .get("https://gorest.co.in/public/v1/users?gender=male&status=inactive&id=4124");
+                    .get("http://localhost:8080/job/testing2/build?token=chau123456789");
             int statusCode = response.getStatusCode();
             Assert.assertEquals(statusCode, 200);
             response.prettyPrint();
