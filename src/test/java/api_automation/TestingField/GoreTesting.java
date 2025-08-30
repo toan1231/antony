@@ -26,7 +26,7 @@ public class GoreTesting extends TestBase {
 
 
         for (int i=0;i<7;i++){
-            System.out.println("4444chauchauchau3");
+            System.out.println("88888888888888888888888888888888888888888888888888888888888");
             Thread.sleep(3000);
         }
 
