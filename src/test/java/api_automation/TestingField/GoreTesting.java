@@ -21,8 +21,8 @@ import org.testng.annotations.Test;
 public class GoreTesting extends TestBase {
 
     @Test()
-    public void user_create_requestData(String email, String name, String gender, String status) throws JsonProcessingException, InterruptedException {
-        for (int i = 0; i < 3; i++) {
+    public void user_create_requestData() throws JsonProcessingException, InterruptedException {
+
 
 
         for (int i=0;i<7;i++){
@@ -35,4 +35,4 @@ public class GoreTesting extends TestBase {
 
         }
     }
-}
+
