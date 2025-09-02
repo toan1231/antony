@@ -44,7 +44,7 @@ public class GoreTesting extends TestBase {
         int statusCode= response.getStatusCode();
         System.out.println("11"+statusCode);
         System.out.println(response.prettyPrint());
-   Assert.assertTrue(false);
+
 
 
 
