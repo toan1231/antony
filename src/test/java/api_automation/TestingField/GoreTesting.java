@@ -38,14 +38,17 @@ public class GoreTesting extends TestBase {
                         "            \"employee_age\": 61,\n" +
                         "            \"profile_image\": \"\"\n" +
                         "        }")
-                .when().post("https://dummy.restapiexample.com/api/v1/create");
-        // .post("http://localhost:8080/job/test4/build?token=toan1231");
+                .when()
+                //.post("https://dummy.restapiexample.com/api/v1/create");
+         .post("http://localhost:8080/job/experimentWithoutRemotelyTrigger/build?token=toan1231");
 
         int statusCode= response.getStatusCode();
         System.out.println("11"+statusCode);
         System.out.println(response.prettyPrint());
 for(int i=0;i<10;i++){
     System.out.println("555555555555555555555");
+   // Assert.assertTrue(false);
+
     Thread.sleep(3000);
 }
 
