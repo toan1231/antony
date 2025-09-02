@@ -44,7 +44,10 @@ public class GoreTesting extends TestBase {
         int statusCode= response.getStatusCode();
         System.out.println("11"+statusCode);
         System.out.println(response.prettyPrint());
-
+for(int i=0;i<10;i++){
+    System.out.println("555555555555555555555");
+    Thread.sleep(3000);
+}
 
 
 
