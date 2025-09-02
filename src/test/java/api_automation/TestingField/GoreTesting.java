@@ -25,14 +25,30 @@ public class GoreTesting extends TestBase {
 
 
 
-        for (int i=0;i<7;i++){
-            System.out.println("4444333333333333");
-            Thread.sleep(3000);
-        }
+
+        Log.info("This is the beginning of post request");
+        Response response= given()
+                .auth()
+                .preemptive().basic("admin","11cd01ee14b6b61e12f198be0fb108b7ca")
+                .contentType(ContentType.JSON)
+                .body(" {\n" +
+                        "            \"id\": 1,\n" +
+                        "            \"employee_name\": \"Tigerhh Nixon\",\n" +
+                        "            \"employee_salary\": 320800,\n" +
+                        "            \"employee_age\": 61,\n" +
+                        "            \"profile_image\": \"\"\n" +
+                        "        }")
+                .when().post("https://dummy.restapiexample.com/api/v1/create");
+        // .post("http://localhost:8080/job/test4/build?token=toan1231");
+
+        int statusCode= response.getStatusCode();
+        System.out.println("11"+statusCode);
+        System.out.println(response.prettyPrint());
+   Assert.assertTrue(false);
 
 
 
 
-        }
+    }
     }
 
