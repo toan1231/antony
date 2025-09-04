@@ -42,6 +42,9 @@ public class GoreTesting extends TestBase {
                 .post("https://dummy.restapiexample.com/api/v1/create");
        //  .post("http://localhost:8080/job/experimentWithoutRemotelyTrigger/build?token=toan1231");
         //toi thich song kieu nao cung duoc
+        //ho chi minh song binh yen
+        /// ////////////////////////////////
+        /// /////////////////////////
 
         int statusCode= response.getStatusCode();
         System.out.println("11"+statusCode);
