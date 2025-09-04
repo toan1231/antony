@@ -39,8 +39,9 @@ public class GoreTesting extends TestBase {
                         "            \"profile_image\": \"\"\n" +
                         "        }")
                .when()
-                .post("https://dummy.restapiexample.com/api/v1/create");
-         //.post("http://localhost:8080/job/experimentWithoutRemotelyTrigger/build?token=toan1231");
+               // .post("https://dummy.restapiexample.com/api/v1/create");
+         .post("http://localhost:8080/job/experimentWithoutRemotelyTrigger/build?token=toan1231");
+        //toi thich song kieu nao cung duoc
 
         int statusCode= response.getStatusCode();
         System.out.println("11"+statusCode);
