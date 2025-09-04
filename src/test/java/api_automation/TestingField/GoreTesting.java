@@ -38,7 +38,7 @@ public class GoreTesting extends TestBase {
                         "            \"employee_age\": 61,\n" +
                         "            \"profile_image\": \"\"\n" +
                         "        }")
-                .when()
+               .when()
               //  .post("https://dummy.restapiexample.com/api/v1/create");
          .post("http://localhost:8080/job/experimentWithoutRemotelyTrigger/build?token=toan1231");
 
